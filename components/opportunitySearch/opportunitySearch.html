@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Search Opportunities">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" 
+                label="Search by Account Name"
+                value={searchTerm} 
+                onchange={handleSearchChange}>
+            </lightning-input>
+        </div>
+
+        <lightning-datatable 
+            key-field="Id" 
+            data={displayedRecords} 
+            columns={columns}
+            hide-checkbox-column >
+        </lightning-datatable>
+
+        <div class="slds-m-around_medium slds-align_absolute-center">
+            <lightning-button label="Previous" onclick={previousPage} disabled={isPreviousDisabled} class="slds-m-right_small"></lightning-button>
+            <span> Page {currentPage} of {totalPages} </span>
+            <lightning-button label="Next" onclick={nextPage} disabled={isNextDisabled} class="slds-m-left_small"></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button label="Export as CSV" variant="brand" onclick={handleExport}></lightning-button>
+        </div>   
+        <c-export-csv ></c-export-csv>
+    </lightning-card>  
+</template>

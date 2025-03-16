@@ -1,0 +1,35 @@
+<template>
+    <template if:true={isOpen}>
+        <section role="dialog">
+            <lightning-card title="Select Columns for CSV">
+                <div class="slds-var-p-around_medium">
+                    <lightning-dual-listbox
+                        name="columnSelection"
+                        label="Select Columns"
+                        source-label="Available Columns"
+                        selected-label="Selected Columns"
+                        options={columnOptions}
+                        value={selectedColumns}
+                        onchange={handleColumnSelection}>
+                    </lightning-dual-listbox>
+                    <template if:true={selectedColumns.length}>
+                        <p class="slds-m-top_small"><strong>Selected Columns:</strong></p>
+                        <ul class="slds-m-left_medium">
+                            <template for:each={selectedColumnLabels} for:item="col">
+                                <li key={col}>{col}</li>
+                            </template>
+                        </ul>
+                    </template>
+                    <div class="slds-align_absolute-center">
+                    <lightning-button 
+                        variant="brand"
+                        label="Download CSV"
+                        onclick={downloadCsv}
+                        class="slds-m-top_medium">
+                    </lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </section>
+    </template>
+</template>
