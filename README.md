@@ -5,4 +5,4 @@ This Lightning Web Component (LWC) enables users to search for Opportunities usi
 
 **Used Technologies** => LWC | Apex | SOQL | JavaScript | HTML
 
-**Note** =>  classes file : stored Apex controller code and Apex test code. lwc file : stored both the component ( child component : exportCsv, parent component : opportunitySearch ).
+**Note** =>  classes file : stored Apex controller code and Apex test code. component file : stored both the component ( child component : exportCsv, parent component : opportunitySearch ).
