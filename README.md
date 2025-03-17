@@ -4,4 +4,4 @@
 
 **Used Technologies** : <br/> LWC | Apex | SOQL | JavaScript | HTML
 
-**Note** : <br/>  classes file : stored Apex controller code and Apex test code.<br/> component file : stored both the component ( child component : exportCsv, parent component : opportunitySearch ).
+**Note** : <br/>  classes file : stored Apex controller code and Apex test code.<br/> component file : stored both the component ( child component : exportCsv, parent component : opportunitySearch ).<br/> <br/>**Custom Object & Fields** : CSV_Download_Log__c <br/>  **Fields** : <br/> Name : to store log name ( Auto Number ) <br/> IP_Address__c : to store the current user IP <br/> Search_Term__c : to store search term <br/> Selected_Columns__c : to store selected columuns  <br/> User__c : to store current user name
